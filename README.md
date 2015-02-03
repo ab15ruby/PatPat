@@ -4,3 +4,4 @@ Kordinat kullanarak Kare, Daire, Üçgen , Dikdörtgen şekillerini random şeki
 
 Kullanıcı ise kendi kordinatlarını kullanarak bu harita üzerinde bulduğu şekillere göre puan kazanacak.
  
+jjj
