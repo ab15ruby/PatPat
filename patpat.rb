@@ -44,23 +44,10 @@ class Patpat
       2
     elsif table.value(x,y).equal? 3 #ucgen için
       3
-
     end
   end
 
 
-
-
-
-
-
-
 end
 
-
-pat = Patpat.new(30)
-
-pat.tablo_olustur(1)
-
-pat.table.display
 

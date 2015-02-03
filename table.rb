@@ -26,7 +26,17 @@ class Table
 
   def display
     @table.each do |satir|
-      satir.each { |item| print "#{item} "  }
+      satir.each do |item|
+        if item.zero?
+        print "\e[0;30m0 "
+        elsif item.equal? 1
+          print "\e[0;34m1 "
+        elsif item.equal? 2
+          print "\e[0;32m2 "
+        elsif item.equal? 3
+          print "\e[0;35m3 "
+        end
+      end
       print "\n"
     end
   end

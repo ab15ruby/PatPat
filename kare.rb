@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# encoding: utf-8
 
 class Kare
 attr_accessor :kenar, :x, :y
