@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require 'table'
+require_relative 'table'
 class Ucgen
 
   def initialize
