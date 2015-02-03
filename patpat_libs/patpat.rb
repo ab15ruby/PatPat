@@ -35,16 +35,7 @@ class Patpat
 
 
   def puanlama (x,y)
-    if table.bosmu?(x,y)
-      0
-
-    elsif table.value(x,y).equal? 1 #kare
-      1
-    elsif table.value(x,y).equal? 2  # dıkdortgen
-      2
-    elsif table.value(x,y).equal? 3 #ucgen için
-      3
-    end
+    table.value(x,y)
   end
 
 

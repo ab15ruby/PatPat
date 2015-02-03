@@ -1,10 +1,10 @@
 #!/usr/bin/env ruby
 # encoding: utf-8
-require_relative 'table'
-require_relative 'kare'
-require_relative 'dikdortgen'
-require_relative 'ucgen'
-require_relative 'patpat'
+require_relative 'patpat_libs/table'
+require_relative 'patpat_libs/kare'
+require_relative 'patpat_libs/dikdortgen'
+require_relative 'patpat_libs/ucgen'
+require_relative 'patpat_libs/patpat'
 
 puts "\e[0;36m**************************************************************\e[0m"
 puts "\e[0;36m*                   \e[1;31m--PATPAT--                               \e[0;36m*"
@@ -66,3 +66,5 @@ puts "\e[1;33mToplam kazandıgınız puan: \e[0;36m#{toplam_puan}\e[0m\n\n"
 sleep 2
 puts "\t\t\e[1;32mPATPAT OYUN HARİTANIZ: \e[0m \n\n"
 patpat.table.display
+
+puts "\e[0m"

@@ -31,7 +31,7 @@ class Table
         print "\e[0;30m0 "
         elsif item.equal? 1
           print "\e[0;34m1 \e[0m"
-        elsif item.equal? 2
+        elsif item.equal? 2 
           print "\e[0;32m2\e[0m "
         elsif item.equal? 3
           print "\e[0;35m3\e[0m "

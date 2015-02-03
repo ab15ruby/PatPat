@@ -1,7 +1,8 @@
 #!/usr/bin/env ruby
 # encoding: utf-8
+require_relative 'table'
 
-class Dikdortgen
+class Kare
 attr_accessor :kenar, :x, :y
 def initialize
   @kenar = 1

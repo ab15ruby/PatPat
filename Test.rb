@@ -1,10 +1,10 @@
 #!/usr/bin/env ruby
 # encoding: utf-8
-require_relative 'table'
-require_relative 'kare'
-require_relative 'dikdortgen'
-require_relative 'ucgen'
-require_relative 'patpat'
+require_relative 'patpat_libs/table'
+require_relative 'patpat_libs/kare'
+require_relative 'patpat_libs/dikdortgen'
+require_relative 'patpat_libs/ucgen'
+require_relative 'patpat_libs/patpat'
 
 puts "\e[0;36m**************************************************************\e[0m"
 puts "\e[0;36m*                   \e[1;31m--PATPAT--                               \e[0;36m*"
@@ -40,23 +40,30 @@ puts "\n\n\e[1;31mOYUN BASLIYOR!!!\e[0m\n\n"
     puts "\e[0;35mLevel #{i}\e[0m"
 
       print "\e[1;35m X ve Y koordinatlarını giriniz(0-30 aralığında)(x y):  \e[0m"
-      x,y  = gets.chomp.split
+      x,y  = gets.chomp.split 
 
-      puan = patpat.puanlama(x.to_i, y.to_i)
+      if x.to_i < 31 and y.to_i < 31
+          puan = patpat.puanlama(x.to_i, y.to_i)
 
-      if puan.zero?
-        puts "----Hiç puan kazanamadınız boş alan!! ----"
-      elsif puan.equal? 1
-        puts "----Tebrikler kareyi patpatladınız!! ----"
-      elsif puan.equal? 2
-        puts "----Tebrikler dikdörtgeni patpatladınız!! ----"
-      elsif puan.equal? 3
-        puts "----Tebrikler üçgeni patpatladınız!! -----"
+        if puan.zero?
+          puts "----Hiç puan kazanamadınız boş alan!! ----"
+        elsif puan.equal? 1
+          puts "----Tebrikler kareyi patpatladınız!! ----"
+        elsif puan.equal? 2
+          puts "----Tebrikler dikdörtgeni patpatladınız!! ----"
+        elsif puan.equal? 3
+          puts "----Tebrikler üçgeni patpatladınız!! -----"
 
-      end
-
-      puts "\n\n\n"
-      toplam_puan += puan
+        end
+        puts "\n\n\n"
+        toplam_puan += puan 
+      else
+        puts "Oppss!! Olmayan bir koordinat girdiniz..!!" 
+        puts "Lütfen 0 - 30 aralığında değer giriniz."
+        puts "\n\n\n"
+        
+    end
+      
 
 
 
@@ -66,3 +73,5 @@ puts "\e[1;33mToplam kazandıgınız puan: \e[0;36m#{toplam_puan}\e[0m\n\n"
 sleep 2
 puts "\t\t\e[1;32mPATPAT OYUN HARİTANIZ: \e[0m \n\n"
 patpat.table.display
+
+puts "\e[0m"
