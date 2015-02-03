@@ -6,25 +6,41 @@ require_relative 'ucgen'
 
 class Patpat
   attr_accessor :table
-  def initialize(size)
+
+  def initialize size
     @table = Table.new(size)
   end
 
+  def tablo_olustur(seviye)
+    if seviye.to_i.equal? 1
+      (0..30).each do |i|
+        Dikdortgen.new.kaydet(table)
+        Kare.new.kaydet(table)
+        Ucgen.new.kaydet(table)
+      end
+    elsif seviye.to_i.equal? 2
+      (0..20).each do |i|
+        Dikdortgen.new.kaydet(table)
+        Kare.new.kaydet(table)
+        Ucgen.new.kaydet(table)
+      end
+    elsif seviye.to_i.equal? 3
+      (0..10).each do |i|
+        Dikdortgen.new.kaydet(table)
+        Kare.new.kaydet(table)
+        Ucgen.new.kaydet(table)
+      end
+    end
+  end
 
 
 
 end
 
 
-pat = Patpat.new(20)
+pat = Patpat.new(30)
 
-
-
-a = Dikdortgen.new
-a.kaydet(pat.table)
-
-k = Kare.new
-k.kaydet(pat.table)
-k.kaydet(pat.table)
+pat.tablo_olustur(1)
 
 pat.table.display
+
