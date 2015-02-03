@@ -19,9 +19,9 @@ class Table
     end
   end
 
-  def atama(x,y)
-    @table[x][y] = 1
-    @table[y][x] = 1
+  def atama(x,y, offset)
+    @table[x][y] = offset.to_i
+    @table[y][x] = offset.to_i
   end
 
   def display
@@ -29,6 +29,10 @@ class Table
       satir.each { |item| print "#{item} "  }
       print "\n"
     end
+  end
+
+  def value(x,y)
+    @table[x][y]
   end
 
 end

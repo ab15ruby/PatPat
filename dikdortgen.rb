@@ -15,12 +15,12 @@ class Dikdortgen
 
         if table.bosmu?(x,y)
             if table.bosmu?(x+1, y)
-                table.atama(x,y)
-                table.atama(x+1,y)
+                table.atama(x,y,2)
+                table.atama(x+1,y,2)
               break
             elsif table.bosmu?(x-1, y)
-              table.atama(x,y)
-              table.atama(x-1,y)
+              table.atama(x,y,2)
+              table.atama(x-1,y,2)
               break
             else
               redo

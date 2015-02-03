@@ -12,7 +12,7 @@ def kaydet(table)
     loop do
       @x , @y = rand(table.size), rand(table.size)
       if table.bosmu?(x,y)
-        table.atama(x,y)
+        table.atama(x,y,1)
         break
       else
         redo

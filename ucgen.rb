@@ -14,10 +14,11 @@ attr_accessor :x, :y
 
          if table.bosmu?(x, y)
            if table.bosmu?(x+1,y) and table.bosmu?(x-1,y) and table.bosmu?(x,y+1)
-              table.atama(x,y)
-              table.atama(x+1,y)
-              table.atama(x-1,y)
-              table.atama(x,y+1)
+
+              table.atama(x,y,3)
+              table.atama(x+1,y,3)
+              table.atama(x-1,y,3)
+              table.atama(x,y+1,3)
               break
            else
              redo
