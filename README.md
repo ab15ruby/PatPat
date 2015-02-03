@@ -1,6 +1,6 @@
 # PatPat
 
-<font color=green>Kordinat kullanarak Kare, Üçgen , Dikdörtgen şekillerini random şekilde bir haritaya yerleştirir.</font>
+Kordinat kullanarak Kare, Üçgen , Dikdörtgen şekilleri rastgele olarak bir haritaya yerleştirir.</font>
 
 
 Kullanıcı ise kendi kordinatlarını kullanarak bu harita üzerinde bulduğu şekillere göre puan kazanacak.
