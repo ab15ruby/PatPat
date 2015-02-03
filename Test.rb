@@ -31,7 +31,7 @@ end
 toplam_puan = 0
 print "\e[0;31mOyun icin seviye belirleyin. (1 - 2 - 3) : \e[0m"
 seviye = gets
-patpat = Patpat.new(30)
+patpat = Patpat.new(31)
 patpat.tablo_olustur(seviye.to_i)
 puts "\n\n\e[1;31mOYUN BASLIYOR!!!\e[0m\n\n"
 
