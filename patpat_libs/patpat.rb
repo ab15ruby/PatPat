@@ -12,26 +12,27 @@ class Patpat
   end
 
   def tablo_olustur(seviye)
-    if seviye.to_i.equal? 1
-      (0..30).each do |i|
+
+    dongu = 30
+      if seviye.equal? 1
+        dongu = 30
+      elsif seviye.equal? 2
+        dongu = 20
+      elsif seviye.equal? 3
+        dongu = 10
+      end
+
+      (0..dongu).each do |i|
         Dikdortgen.new.kaydet(table)
+        Dikdortgen.new.kaydet(table)
+        Kare.new.kaydet(table)
         Kare.new.kaydet(table)
         Ucgen.new.kaydet(table)
       end
-    elsif seviye.to_i.equal? 2
-      (0..20).each do |i|
-        Dikdortgen.new.kaydet(table)
-        Kare.new.kaydet(table)
-        Ucgen.new.kaydet(table)
-      end
-    elsif seviye.to_i.equal? 3
-      (0..10).each do |i|
-        Dikdortgen.new.kaydet(table)
-        Kare.new.kaydet(table)
-        Ucgen.new.kaydet(table)
-      end
-    end
-    end
+
+
+
+  end
 
 
   def puanlama (x,y)
