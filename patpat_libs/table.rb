@@ -12,7 +12,7 @@ class Table
 
 
   def bosmu?(x,y)
-    if x < size and y < size
+    if x < @size and x > 0 and y > 0 and y < @size
       @table[x][y].zero?
     else
       return false
@@ -20,7 +20,9 @@ class Table
   end
 
   def atama(x,y, offset)
-    @table[x][y] = offset.to_i
+    if x < @size and x > 0 and y > 0 and y < @size
+      @table[x][y] = offset.to_i
+    end
   end
 
   def display
